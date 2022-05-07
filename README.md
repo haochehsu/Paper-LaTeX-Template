@@ -6,7 +6,7 @@ Based on the NIPS styling, it makes this thesis template esthetic and convenient
 
 Various LaTeX syntaxes are also demonstrated throughout the document such as spacing, hyperlinked footers, abbreviations, coloring, listing, table-of-contents customization, hyper-referencing, figure and table formatting with decimal alignment, mathematics symbols, and graphic elements. Users can refer to the syntax during editing.
 
-🎉 The compiled template PDF can be viewed [here](https://www.haochehsu.com/other/Thesis_LaTeX_Template.pdf).
+🎉 The compiled thesis PDF can be viewed [here](https://www.haochehsu.com/other/Thesis_LaTeX_Template.pdf).
 
 For **Dissertation LaTeX Template**, please go to this [link](https://github.com/howardhsumail/Dissertation-LaTeX-Template.git).
 

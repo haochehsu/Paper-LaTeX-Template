@@ -1,0 +1,7 @@
+*.nc
+*.DS_store
+*.dat
+*.apk
+*.dex
+*.log
+.Rproj.user

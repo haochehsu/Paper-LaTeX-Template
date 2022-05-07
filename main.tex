@@ -229,7 +229,7 @@ In the following, we present the algorithm:
 \begin{algorithm}
   \SetKwInOut{Input}{Input}
   \SetKwInOut{Output}{Output}
-  
+
   \underline{function Euclid} $(a,b)$\;
   \Input{Two nonnegative integers $a$ and $b$}
   \Output{$\gcd(a,b)$}
@@ -255,7 +255,7 @@ In the following, we present the algorithm:
     l
     *{5}{S[table-format=2.1]}
     }
-    
+
     \toprule
     & \multicolumn{3}{c}{\bfseries Cohort} \\
     \cmidrule(l){2-4}
@@ -289,7 +289,7 @@ We graph with \texttt{tikz} in \LaTeX:
 
 \begin{multicols}{2}
   \raggedcolumns
-  
+
   \begin{tikzpicture}[scale=.65]
     \draw [<-] (0,7.8) node [left] {$x_2,y_2$} -- (0,0);
     \draw [->] (0,0) -- (8.9,0) node [below] {$x_1,y_1$};
@@ -304,10 +304,10 @@ We graph with \texttt{tikz} in \LaTeX:
     \draw (4.15,4.3) to [out=-90, in=120] (4.55,3) to [out=-60, in=160] (7.4,1.1);
     \draw (0,6.45) to [out=0, in=115] (4.4,3.2) to [out=-65, in=90] (5.05,0);
   \end{tikzpicture}
-  
+
   \columnbreak
-  
-  \begin{tikzpicture}[scale=0.9]\hlabel{triangle}
+
+  \begin{tikzpicture}[scale=0.98]\hlabel{triangle}
     \draw [thick] (0,0) node [left] {$\Pi_3$} -- (3,1.8) node [below] {0} -- (3,5.4) node [right] {$\Pi_2$};
     \draw [thick] (3,1.8) -- (6,0) node [right] {$\Pi_1$};
     \draw [thick] (.4,.26) -- (3,4.8);
@@ -316,7 +316,7 @@ We graph with \texttt{tikz} in \LaTeX:
     \node [thick,right] at (3,5) {$(0,1,0)$};
     \node [thick,right] at (5.65,.4) {$(1,0,0)$};
   \end{tikzpicture}
-  
+
 \end{multicols}
 
 \clearpage
@@ -324,6 +324,7 @@ We graph with \texttt{tikz} in \LaTeX:
 %%%%%%%%%% REFERENCES %%%%%%%%%%
 \bibliographystyle{Style/aea} % Style/ecta
 \phantomsection
+\addcontentsline{toc}{section}{\refname}
 \bibliography{reference}
 
 %%%%%%%%%% APPENDIX %%%%%%%%%%
@@ -332,42 +333,41 @@ We graph with \texttt{tikz} in \LaTeX:
 \appendix
 
 \section{Additional Discussion}\hlabel{discussion}
-\phantomsection\label{Additional Discussion}
 
 \lipsum[20]
 
 \section{Proof of Theorem \ref{T1}}\hlabel{proof_T1}
-\phantomsection\label{Proof of Theorem}
 
 \hlabel{ch1_proof}We will proof the following equation:
 \begin{proof}
-  
+
   Given $y$, $x$, $\Delta$, $\nu$, $\eta$, $\mathcal{L}$=
   $\begin{pmatrix}
   1 & 2 & 3 & 4 & 5 \\
   3 & 4 & 5 & 6 & 7
-\end{pmatrix}$, and $\prod=\begin{vmatrix}
-A &B  &C \\
-D&  E& F
-\end{vmatrix}$, if
+  \end{pmatrix}$,
+  and $\prod=\begin{vmatrix}
+  A &B  &C \\
+  D&  E& F
+  \end{vmatrix}$, if
 
-\begin{center}
-  \begin{tabular}{ll}
-    $\begin{cases}
-    \text{trade}, & p(\text{trade})=\dfrac{y}{v}\\
-    \text{no trade}, & p(\text{no trade})=1-\dfrac{y}{v}
-    \end{cases}$\\
-  \end{tabular}
-\end{center}
+  \begin{center}
+    \begin{tabular}{ll}
+      $\begin{cases}
+      \text{trade}, & p(\text{trade})=\dfrac{y}{v}\\
+      \text{no trade}, & p(\text{no trade})=1-\dfrac{y}{v}
+      \end{cases}$\\
+    \end{tabular}
+  \end{center}
 
-then we have
+  then we get the following:
 
-\begin{align}
-  \nonumber y&=\underset{\pi}{\E}\Big(\beta x + \epsilon\Big)\\
-  &\neq\sum\limits_{i}\beta_i(\underbrace{\alpha+\xi}_{\text{variables}}) + \epsilon\\
-  &\Longrightarrow \int_{0}^{10}r \left( \dfrac{r}{50} \right)dr\xlongequal{\text{text here}}\dfrac{r^{3}}{150}\biggr\rvert^{10}_{0}, \forall x\in (a,b)
-\end{align}
-So from $\widehat{ABCD}$, $\widetilde{ABCD}$, $\widehat{ABCD}$, $\overrightarrow{ABCD}$, and $\overline{ABCD}$, we get the desire $\underline{\text{result}}$.
+  \begin{align}
+    \nonumber y&=\underset{\pi}{\E}\Big(\beta x + \epsilon\Big)\\
+    &\neq\sum\limits_{i}\beta_i(\underbrace{\alpha+\xi}_{\text{variables}}) + \epsilon\\
+    &\Longrightarrow \int_{0}^{10}r \left( \dfrac{r}{50} \right)dr\xlongequal{\text{text here}}\dfrac{r^{3}}{150}\biggr\rvert^{10}_{0}, \forall x\in (a,b)
+  \end{align}
+  So from $\widehat{ABCD}$, $\widetilde{ABCD}$, $\widehat{ABCD}$, $\overrightarrow{ABCD}$, and $\overline{ABCD}$, we get the desire $\underline{\text{result}}$.
 \end{proof}
 
 \begin{framed}

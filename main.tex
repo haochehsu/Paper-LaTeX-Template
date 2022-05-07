@@ -1,0 +1,378 @@
+\documentclass[11pt, letterpaper]{article}
+\usepackage[colorlinks=true,citecolor=blue]{hyperref}
+\usepackage{Style/arxiv, Style/package}
+
+%%%%%%%%%% ABBREVIATION %%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\h}{\mathcal{H}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Pn}{\mathbb{P}_n}
+\newcommand{\bs}{\boldsymbol}
+\newcommand{\sgn}{\mathrm{sign}}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\trace}{\mathrm{trace}}
+\newcommand{\cov}{\mathrm{cov}}
+\newcommand{\var}{\mathrm{var}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\x}{{\bs X}}
+\newcommand{\g}{\cellcolor{gray!25}}
+\newcommand{\gline}{\rowcolor{gray!25}}
+\newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{definition}{Definition}
+\newtheorem*{assumption}{Assumption}
+\newtheorem{lemma}{Lemma}
+\newtheorem{example}{Example}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+\newtheorem{proposition}{Proposition}
+\renewcommand{\headeright}{~}
+\renewcommand{\undertitle}{~}
+\renewcommand{\shorttitle}{~}
+\def\lquote{\textquotedblleft}
+\def\rquote{\textquotedblright \ }
+
+%%%%%%%%%% HEADER & FOOTER %%%%%%%%%%
+\fancypagestyle{page_style}{
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt} % 0.4pt
+% \fancyhead[R]{Top Right Header}
+% \fancyhead[L]{Top Left Header}
+% \chead{Top Center Header}
+\renewcommand{\footrulewidth}{0pt} % 0.4pt
+% \fancyfoot[R]{Bottom Right Footer}
+% \fancyfoot[L]{Bottom Left Footer}
+\fancyfoot[C]{\thepage}
+}
+\pagestyle{page_style}
+
+%%%%%%%%%% CUSTOMIZE %%%%%%%%%%
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,anchorcolor=blue}
+\definecolor{mycolor}{HTML}{3D8A2B}
+\renewcommand*\thefootnote{\textcolor{red}{\arabic{footnote}}}
+\sisetup{parse-numbers = false}
+
+%%%%%%%%%% LISTING %%%%%%%%%%
+\lstdefinestyle{python_code}{
+language=Python, % python, matlab, r
+basicstyle=\linespread{1}\footnotesize\ttfamily,
+numbers=left,
+numberstyle=\tiny,
+frame=tb,
+columns=fullflexible,
+showstringspaces=false,
+breaklines=true
+}
+
+%%%%%%%%%% Title %%%%%%%%%%
+\title{The Thesis Title\thanks{We thank someone for excellent research assistance. We thank someone for their comments and suggestions.}}
+
+%%%%%%%%%% AUTHOR %%%%%%%%%%
+\author{Your Name\thanks{Your address; Email: \href{mailto:yourEmail@email.com}{yourEmail@email.com}.}\\
+Department of Economics}
+
+% Uncomment the following if there are multiple author
+% \author{
+% Your Name\thanks{Your address; Email: \href{mailto:yourEmail@email.com}{yourEmail@email.com}.}\\Department of Economics
+% \And
+% Your Coauthor\\Department of Economics
+% }
+
+%%%%%%%%%% DATE %%%%%%%%%%
+\date{\the\year{}}
+
+%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%
+\begin{document}
+\maketitle
+\vspace*{1cm}
+
+%\singlespacing
+%\onehalfspacing
+\doublespacing
+
+%%%%%%%%%% ABSTRACT %%%%%%%%%%
+\begin{abstract}
+  \lipsum[3] Download this template at the \href{https://github.com/howardhsumail/Dissertation-LaTeX-Template.git}{Github repository}.
+\end{abstract}
+\vspace*{2cm}
+
+%%%%%%%%%% KEYWORDS %%%%%%%%%%
+\textbf{Keywords}: keyword 1, keyword 2
+
+%%%%%%%%%% CODES %%%%%%%%%%
+\textbf{JEL Codes}: J02, R10
+\clearpage
+
+%%%%%%%%%% CONTENTS %%%%%%%%%%
+\section{Introduction}
+\lipsum[4] Many previous research has has studied this problem \citep{Lee2018, DS2018}. Download this template at the \href{https://github.com/howardhsumail/Dissertation-LaTeX-Template.git}{Github repository}.
+
+\section{Model}
+\lipsum[5] More are discussed in Appendix \ref{discussion}.
+
+\begin{theorem}[Envelope Theorem]\hlabel{T1}
+  Only the direct effects of a change in an exogenous variable need be considered, even though the exogenous variable may enter the maximum value function indirectly as part of the solution to the endogenous choice variables. The proof is in Appendix \ref{proof_T1}.
+\end{theorem}
+
+The {\color{mycolor}competition} can be illustrated with the following graph with the implementation is presented in Listing \ref{mypythoncode}:
+
+\begin{figure}[H]
+  \centering
+  \caption{This is a graph}
+  \hlabel{picture1}
+  \includegraphics[scale=0.5]{Graph/pic.pdf}
+  \hspace*{-0.6cm}
+  \begin{minipage}{0.9\textwidth}
+    \onehalfspacing
+    \vspace*{0.12cm}
+    \begin{tablenotes}
+      \footnotesize
+      \item\textit{Note:} some notes. The graph should be self-contained. \lipsum[66]
+    \end{tablenotes}
+  \end{minipage}
+\end{figure}
+
+\section{Comparative Statics}
+\lipsum[6] The results are presented in Appendix \ref{summary_b}.
+
+This is also demonstrated in Figure \ref{picture1}. Download this template at the \href{https://github.com/howardhsumail/Dissertation-LaTeX-Template.git}{Github repository}.
+
+\begin{lstlisting}[style=python_code, caption={Long short-term memory}, label=mypythoncode]
+class network_LSTM(nn.Module):
+    def __init__(self, input_size=1, hidden_size=256, output_size=1):
+        super().__init__()
+        self.hidden_size = hidden_size
+        self.lstm = nn.LSTM(input_size, hidden_size)
+
+        # fully-connected
+        self.linear = nn.Linear(hidden_size, output_size)
+
+        self.hidden = (
+            torch.zeros(1, 1, self.hidden_size),
+            torch.zeros(1, 1, self.hidden_size)
+        )
+
+    def forward(self,vec):
+        lstm_output, self.hidden = self.lstm(vec.view(len(vec),1,-1), self.hidden)
+        prediction = self.linear(lstm_output.view(len(vec),-1))
+        return prediction[-1]
+\end{lstlisting}
+
+\section{Empirical Results}
+We follow the approach from \cite{HL2019}. \lipsum[50] By using this approach, comparable results can be obtained \citep{CES2013}.
+
+To calculate the ELBO\footnote{More information about the evidence lower bound (ELBO) can be found on the \href{https://en.wikipedia.org/wiki/Evidence_lower_bound}{Wikipedia}. }, we start from using the property of the KL-divergence. \lipsum[20]
+
+The data can be summarized by the tables with decimal alignment below:
+
+\renewcommand*\arraystretch{0.95}
+\renewcommand{\tabcolsep}{6pt}
+\begin{table}[H]
+  \renewcommand{\thetable}{B.\arabic{table}a}
+  \caption{First Table}
+  \label{summary_a}
+  \fontsize{9}{11}\selectfont
+  \hspace*{-0.5cm}
+  \begin{tabular}{lrrrrrrrrr}
+    \toprule
+    Category                   & Total & Shares (\%) & Female & Male  & Asian & Black/AA & His./Latino & White/Cau. & Zeros (\%) \\ \hline
+    child care                 & 19.39 & 0.08   & 12.32  & 20.12 & 23.14 & 63.78    & 20.24       & 19.00      & 0.07  \\
+    eating                     & 30.35 & 6.12   & 35.97  & 6.23 & 24.61 & 21.58    & 38.18       & 2.02      & 0.00  \\
+    education                  & 9.91  & 0.04   & 9.94   & 90.54  & 9.69  & 7.99     & 10.64        & 10.14      & 0.90  \\
+    entertainment (not TV)     & 26.05 & 0.10   & 29.19  & 26.60 & 33.36 & 26.13    & 4.43       & 25.15      & 0.45  \\ \bottomrule
+  \end{tabular}
+  \hspace*{-1cm}
+  \begin{minipage}{1.065\textwidth}
+    \onehalfspacing
+    \vspace*{0.05cm}
+    \begin{tablenotes}
+      \footnotesize
+      \item\textit{Note:} This is the first table.
+    \end{tablenotes}
+  \end{minipage}
+\end{table}
+
+\renewcommand*\arraystretch{0.95}
+\renewcommand{\tabcolsep}{7.5pt}
+\begin{table}[H]
+  \addtocounter{table}{-1}
+  \renewcommand{\thetable}{B.\arabic{table}b}
+  \caption{Second Table}
+  \label{summary_b}
+  \fontsize{9}{11}\selectfont
+  \hspace*{-0.5cm}
+  \begin{tabular}{lrrrrrrrrr}
+    \toprule
+    Category                   & Total & Shares (\%) & Female & Male  & Asian & Black/AA & His./Latino & White/Cau. & Zeros (\%) \\ \hline
+    child care                 & 19.39 & 0.08   & 39.32  & 40.12 & 23.14 & 18.78    & 20.24       & 19.00      & 0.07  \\
+    personal care              & 13.92 & 0.06   & 24.00  & 23.14 & 16.12 & 1.76    & 15.15       & 13.66      & 0.00  \\
+    sports/exercise            & 20.44 & 0.08   & 20.38  & 31.00 & 24.99 & 25.48    & 20.71       & 20.07      & 0.53  \\
+    TV                         & 28.61 & 0.12   & 48.47  & 9.93 & 2.35 & 63.70    & 29.22       & 80.20      & 0.46  \\ \bottomrule
+  \end{tabular}
+  \hspace*{-1cm}
+  \begin{minipage}{1.065\textwidth}
+    \onehalfspacing
+    \vspace*{0.05cm}
+    \begin{tablenotes}
+      \footnotesize
+      \item\textit{Note:} This is the second table.
+    \end{tablenotes}
+  \end{minipage}
+\end{table}
+
+In the following, we present the algorithm:
+
+\section{Algorithm}
+\begin{algorithm}
+  \SetKwInOut{Input}{Input}
+  \SetKwInOut{Output}{Output}
+  
+  \underline{function Euclid} $(a,b)$\;
+  \Input{Two nonnegative integers $a$ and $b$}
+  \Output{$\gcd(a,b)$}
+  \eIf{$b=0$}
+  {
+  return $a$\;
+  }
+  {
+  return Euclid$(b,a\mod b)$\;
+  }
+  \caption{Euclid's algorithm for finding the greatest common divisor of two nonnegative integers}
+\end{algorithm}
+
+\lipsum[30]
+
+\renewcommand*\arraystretch{0.6}
+\renewcommand{\tabcolsep}{25pt}
+\begin{table}[H]
+  \centering
+  \caption{Summary Statistics}
+  \label{table:ssna}
+  \begin{tabular}{
+    l
+    *{5}{S[table-format=2.1]}
+    }
+    
+    \toprule
+    & \multicolumn{3}{c}{\bfseries Cohort} \\
+    \cmidrule(l){2-4}
+    & {2006} & {2007} & {2008} \\
+    \midrule
+    \bfseries Students registered & {1535} & {1584} & {1767}\\
+    \addlinespace
+    \bfseries Gender (\%) \\
+    Male                         & 61.1 & 64.5 & 57.7\\
+    Female                       & 38.9 & 35.5 & 42.3\\
+    \addlinespace
+    \bfseries Race (\%) \\
+    White                        & 43.3 & 43.4 & 40.6\\
+    Black                        & 29.8 & 33.4 & 34.8\\
+    \bottomrule
+  \end{tabular}
+  \begin{minipage}{0.8\textwidth}
+    \onehalfspacing
+    \vspace*{0.05cm}
+    \begin{tablenotes}
+      \footnotesize
+      \item\textit{Note:} Source: UCT Institutional Planning Department
+    \end{tablenotes}
+  \end{minipage}
+\end{table}
+
+\section{Conclusion}
+\lipsum[7]
+
+We graph with \texttt{tikz} in \LaTeX:
+
+\begin{multicols}{2}
+  \raggedcolumns
+  
+  \begin{tikzpicture}[scale=.65]
+    \draw [<-] (0,7.8) node [left] {$x_2,y_2$} -- (0,0);
+    \draw [->] (0,0) -- (8.9,0) node [below] {$x_1,y_1$};
+    \node [left] at (0,6.45) {$P$};
+    \node [below] at (5.05,0) {$P'$};
+    \node [left] at (4.3,3.2) {$x^n$};
+    \node [below] at (2.4,5.4) {$y^f$};
+    \node [right] at (5.75,3.4) {$x^f$};
+    \draw (5.8,.5) -- (2.65,6.7);
+    \draw (.5,7.2) -- (7.7,1.7);
+    \draw (4.45,5.3) to [out=-90, in=140] (5.75,3.2) to [out=-40, in=160] (7.7,2.2);
+    \draw (4.15,4.3) to [out=-90, in=120] (4.55,3) to [out=-60, in=160] (7.4,1.1);
+    \draw (0,6.45) to [out=0, in=115] (4.4,3.2) to [out=-65, in=90] (5.05,0);
+  \end{tikzpicture}
+  
+  \columnbreak
+  
+  \begin{tikzpicture}[scale=0.9]\hlabel{triangle}
+    \draw [thick] (0,0) node [left] {$\Pi_3$} -- (3,1.8) node [below] {0} -- (3,5.4) node [right] {$\Pi_2$};
+    \draw [thick] (3,1.8) -- (6,0) node [right] {$\Pi_1$};
+    \draw [thick] (.4,.26) -- (3,4.8);
+    \draw [thick] (.4,.26) -- (5.55,.26) -- (3,4.8);
+    \node [thick,below] at (1,.26) {$(0,0,1)$};
+    \node [thick,right] at (3,5) {$(0,1,0)$};
+    \node [thick,right] at (5.65,.4) {$(1,0,0)$};
+  \end{tikzpicture}
+  
+\end{multicols}
+
+\clearpage
+
+%%%%%%%%%% REFERENCES %%%%%%%%%%
+\bibliographystyle{Style/aea} % Style/ecta
+\phantomsection
+\bibliography{reference}
+
+%%%%%%%%%% APPENDIX %%%%%%%%%%
+\newpage
+\appendixpage
+\appendix
+
+\section{Additional Discussion}\hlabel{discussion}
+\phantomsection\label{Additional Discussion}
+
+\lipsum[20]
+
+\section{Proof of Theorem \ref{T1}}\hlabel{proof_T1}
+\phantomsection\label{Proof of Theorem}
+
+\hlabel{ch1_proof}We will proof the following equation:
+\begin{proof}
+  
+  Given $y$, $x$, $\Delta$, $\nu$, $\eta$, $\mathcal{L}$=
+  $\begin{pmatrix}
+  1 & 2 & 3 & 4 & 5 \\
+  3 & 4 & 5 & 6 & 7
+\end{pmatrix}$, and $\prod=\begin{vmatrix}
+A &B  &C \\
+D&  E& F
+\end{vmatrix}$, if
+
+\begin{center}
+  \begin{tabular}{ll}
+    $\begin{cases}
+    \text{trade}, & p(\text{trade})=\dfrac{y}{v}\\
+    \text{no trade}, & p(\text{no trade})=1-\dfrac{y}{v}
+    \end{cases}$\\
+  \end{tabular}
+\end{center}
+
+then we have
+
+\begin{align}
+  \nonumber y&=\underset{\pi}{\E}\Big(\beta x + \epsilon\Big)\\
+  &\neq\sum\limits_{i}\beta_i(\underbrace{\alpha+\xi}_{\text{variables}}) + \epsilon\\
+  &\Longrightarrow \int_{0}^{10}r \left( \dfrac{r}{50} \right)dr\xlongequal{\text{text here}}\dfrac{r^{3}}{150}\biggr\rvert^{10}_{0}, \forall x\in (a,b)
+\end{align}
+So from $\widehat{ABCD}$, $\widetilde{ABCD}$, $\widehat{ABCD}$, $\overrightarrow{ABCD}$, and $\overline{ABCD}$, we get the desire $\underline{\text{result}}$.
+\end{proof}
+
+\begin{framed}
+  Consider $g(x)=f(x)-x$, since $f(x)$ and $x$ are continuous, then $g:[a,b]\to\mathbb{R}$ is continuous. Then
+  $$g(a)=f(a)-a>0, \ g(b)=f(b)-b<0$$
+  By IVT: $\exists c\in(a,b)$ s.t. $g(c)=0\implies \exists c\in(a,b)$ s.t. $f(c)-c=0\implies f(c)=c.$
+\end{framed}
+
+\end{document}

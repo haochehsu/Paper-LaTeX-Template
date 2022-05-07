@@ -8,6 +8,8 @@ Various LaTeX syntaxes are also demonstrated throughout the document such as spa
 
 🎉 The compiled template PDF can be viewed [here](https://www.haochehsu.com/other/Thesis_LaTeX_Template.pdf).
 
+For **Dissertation LaTeX Template**, please go to this [link](https://github.com/howardhsumail/Dissertation-LaTeX-Template.git).
+
 ---
 
 ### 🖋 The Template
@@ -37,5 +39,3 @@ For local editing, [download](https://github.com/howardhsumail/Thesis-LaTeX-Temp
 ### 📒 General Notes
 
 For help, comments, bug reporting, and change requests, please [contact](mailto:howardhsumail@gmail.com) the [author](https://www.haochehsu.com/). You can use or redistribute this project, however, the author takes no responsibility for whatever usage of this template. Finally, you are very welcome to contribute to this template.
-
-For **Dissertation LaTeX Template**, please go to this [link](https://github.com/howardhsumail/Dissertation-LaTeX-Template.git).

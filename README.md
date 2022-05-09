@@ -38,7 +38,7 @@ For local editing, [download](https://github.com/howardhsumail/Paper-LaTeX-Templ
 
 ### ⚙️ Font Size
 
-The font size of this template is **10.95** point type with **12p** points line height to match the Dissertation Formatting Manual.
+The font size of this template is **10.95** point type with **12** points line height to match the Dissertation Formatting Manual.
 
 The default (NIPS styling) is 10pt, with 11 points vertical spacing. To modify the font size, go to `Style/arxiv.sty` line 53 and use the roman numerals below to change the format:
 

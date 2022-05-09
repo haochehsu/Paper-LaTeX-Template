@@ -68,7 +68,7 @@ breaklines=true
 }
 
 %%%%%%%%%% Title %%%%%%%%%%
-\title{The Thesis Title\thanks{We thank someone for excellent research assistance. We thank someone for their comments and suggestions.}}
+\title{The Paper Title\thanks{We thank someone for excellent research assistance. We thank someone for their comments and suggestions.}}
 
 %%%%%%%%%% AUTHOR %%%%%%%%%%
 \author{Your Name\thanks{Your address; Email: \href{mailto:yourEmail@email.com}{yourEmail@email.com}.}\\
@@ -108,10 +108,10 @@ Department of Economics}
 
 %%%%%%%%%% CONTENTS %%%%%%%%%%
 \section{Introduction}
-\lipsum[4] Many previous research has has studied this problem \citep{Lee2018, DS2018}. Download this template at the \href{https://github.com/howardhsumail/Thesis-LaTeX-Template.git}{Github repository}.
+\lipsum[4-5] Many previous research has has studied this problem \citep{Lee2018, DS2018}. Download this template at the \href{https://github.com/howardhsumail/Thesis-LaTeX-Template.git}{Github repository}.
 
 \section{Model}
-\lipsum[5] More are discussed in Appendix \ref{discussion}.
+\lipsum[105-106] More are discussed in Appendix \ref{discussion}.
 
 \begin{theorem}[Envelope Theorem]\hlabel{T1}
   Only the direct effects of a change in an exogenous variable need be considered, even though the exogenous variable may enter the maximum value function indirectly as part of the solution to the endogenous choice variables. The proof is in Appendix \ref{proof_T1}.
@@ -130,15 +130,14 @@ The {\color{mycolor}competition} can be illustrated with the following graph wit
     \vspace*{0.12cm}
     \begin{tablenotes}
       \footnotesize
-      \item\textit{Note:} some notes. The graph should be self-contained. \lipsum[66]
+      \item\textit{Note:} some notes. The graph should be self-contained. \lipsum[65]
     \end{tablenotes}
   \end{minipage}
 \end{figure}
 
 \section{Comparative Statics}
-\lipsum[6] The results are presented in Appendix \ref{summary_b}.
 
-This is also demonstrated in Figure \ref{picture1}. Download this template at the \href{https://github.com/howardhsumail/Thesis-LaTeX-Template.git}{Github repository}.
+This is also demonstrated in Figure \ref{picture1} and the results are presented in Appendix \ref{summary_b}. Download this template at the \href{https://github.com/howardhsumail/Thesis-LaTeX-Template.git}{Github repository}.
 
 \begin{lstlisting}[style=python_code, caption={Long short-term memory}, label=mypythoncode]
 class network_LSTM(nn.Module):
@@ -161,20 +160,20 @@ class network_LSTM(nn.Module):
         return prediction[-1]
 \end{lstlisting}
 
+\lipsum[103] 
+
 \section{Empirical Results}
-We follow the approach from \cite{HL2019}. \lipsum[50] By using this approach, comparable results can be obtained \citep{CES2013}.
+We follow the approach from \cite{HL2019}. \lipsum[50] 
 
-To calculate the ELBO\footnote{More information about the evidence lower bound (ELBO) can be found on the \href{https://en.wikipedia.org/wiki/Evidence_lower_bound}{Wikipedia}. }, we start from using the property of the KL-divergence. \lipsum[20]
+By using this approach, comparable results can be obtained \citep{CES2013}. To calculate the ELBO\footnote{More information about the evidence lower bound (ELBO) can be found on the \href{https://en.wikipedia.org/wiki/Evidence_lower_bound}{Wikipedia}. }, we start from using the property of the KL-divergence. The data can be summarized by the tables with decimal alignment below:
 
-The data can be summarized by the tables with decimal alignment below:
-
-\renewcommand*\arraystretch{0.95}
-\renewcommand{\tabcolsep}{6pt}
+\renewcommand*\arraystretch{0.97}
+\renewcommand{\tabcolsep}{2.5pt}
 \begin{table}[H]
   \renewcommand{\thetable}{B.\arabic{table}a}
   \caption{First Table}
   \label{summary_a}
-  \fontsize{9}{11}\selectfont
+  \fontsize{10}{11}\selectfont
   \hspace*{-0.5cm}
   \begin{tabular}{lrrrrrrrrr}
     \toprule
@@ -185,7 +184,7 @@ The data can be summarized by the tables with decimal alignment below:
     entertainment (not TV)     & 26.05 & 0.10   & 29.19  & 26.60 & 33.36 & 26.13    & 4.43       & 25.15      & 0.45  \\ \bottomrule
   \end{tabular}
   \hspace*{-1cm}
-  \begin{minipage}{1.065\textwidth}
+  \begin{minipage}{1\textwidth}
     \onehalfspacing
     \vspace*{0.05cm}
     \begin{tablenotes}
@@ -195,14 +194,14 @@ The data can be summarized by the tables with decimal alignment below:
   \end{minipage}
 \end{table}
 
-\renewcommand*\arraystretch{0.95}
-\renewcommand{\tabcolsep}{7.5pt}
+\renewcommand*\arraystretch{0.97}
+\renewcommand{\tabcolsep}{4.1pt}
 \begin{table}[H]
   \addtocounter{table}{-1}
   \renewcommand{\thetable}{B.\arabic{table}b}
   \caption{Second Table}
   \label{summary_b}
-  \fontsize{9}{11}\selectfont
+  \fontsize{10}{11}\selectfont
   \hspace*{-0.5cm}
   \begin{tabular}{lrrrrrrrrr}
     \toprule
@@ -213,7 +212,7 @@ The data can be summarized by the tables with decimal alignment below:
     TV                         & 28.61 & 0.12   & 48.47  & 9.93 & 2.35 & 63.70    & 29.22       & 80.20      & 0.46  \\ \bottomrule
   \end{tabular}
   \hspace*{-1cm}
-  \begin{minipage}{1.065\textwidth}
+  \begin{minipage}{1\textwidth}
     \onehalfspacing
     \vspace*{0.05cm}
     \begin{tablenotes}
@@ -223,9 +222,10 @@ The data can be summarized by the tables with decimal alignment below:
   \end{minipage}
 \end{table}
 
+\section{Algorithm}
+
 In the following, we present the algorithm:
 
-\section{Algorithm}
 \begin{algorithm}
   \SetKwInOut{Input}{Input}
   \SetKwInOut{Output}{Output}
@@ -243,14 +243,15 @@ In the following, we present the algorithm:
   \caption{Euclid's algorithm for finding the greatest common divisor of two nonnegative integers}
 \end{algorithm}
 
-\lipsum[30]
+\lipsum[30-31]
 
-\renewcommand*\arraystretch{0.6}
+\renewcommand*\arraystretch{0.55}
 \renewcommand{\tabcolsep}{25pt}
 \begin{table}[H]
   \centering
   \caption{Summary Statistics}
-  \label{table:ssna}
+  \hlabel{ss}
+  \fontsize{10}{11}\selectfont
   \begin{tabular}{
     l
     *{5}{S[table-format=2.1]}
@@ -272,18 +273,18 @@ In the following, we present the algorithm:
     Black                        & 29.8 & 33.4 & 34.8\\
     \bottomrule
   \end{tabular}
-  \begin{minipage}{0.8\textwidth}
+  \begin{minipage}{0.79\textwidth}
     \onehalfspacing
     \vspace*{0.05cm}
     \begin{tablenotes}
       \footnotesize
-      \item\textit{Note:} Source: UCT Institutional Planning Department
+      \item\textit{Note:} Source: UCT Institutional Planning Department.
     \end{tablenotes}
   \end{minipage}
 \end{table}
 
 \section{Conclusion}
-\lipsum[7]
+\lipsum[7-9]
 
 We graph with \texttt{tikz} in \LaTeX:
 
@@ -334,7 +335,7 @@ We graph with \texttt{tikz} in \LaTeX:
 
 \section{Additional Discussion}\hlabel{discussion}
 
-\lipsum[20]
+\lipsum[103]
 
 \section{Proof of Theorem \ref{T1}}\hlabel{proof_T1}
 

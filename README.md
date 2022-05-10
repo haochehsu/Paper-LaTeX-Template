@@ -38,7 +38,7 @@ For local editing, [download](https://github.com/howardhsumail/Paper-LaTeX-Templ
 
 ### ⚙️ Font Size
 
-The font size of this template is **11** point type. The default (NIPS styling) is 10pt. To modify the font size, go to "FONT SIZE" preamble in `main.tex` and either comment out `\input{size11.clo}` (11pt) or select `\input{size12.clo}` (12pt).
+The font size of this template is **11pt**. The default (NIPS styling) is 10pt. To modify the font size, go to "FONT SIZE" preamble in `main.tex` and either comment out `\input{size11.clo}` (11pt) or select `\input{size12.clo}` (12pt).
 
 ### 📒 General Notes
 

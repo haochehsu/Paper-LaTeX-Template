@@ -36,7 +36,6 @@
 
 %%%%%%%%%% HEADER & FOOTER %%%%%%%%%%
 \def\target_page{1}
-
 \fancypagestyle{page_style}{\fancyhf{}
 \renewcommand{\headrulewidth}{0pt} % 0.4pt
 % \fancyhead[R]{Top Right Header}
@@ -50,10 +49,10 @@
 \pagestyle{page_style}
 
 %%%%%%%%%% CUSTOMIZE %%%%%%%%%%
-\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,anchorcolor=blue}
-\definecolor{mycolor}{HTML}{3D8A2B}
-\renewcommand*\thefootnote{\textcolor{red}{\arabic{footnote}}}
 \sisetup{parse-numbers = false}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,anchorcolor=blue}
+\renewcommand*\thefootnote{\textcolor{red}{\arabic{footnote}}}
+\definecolor{mycolor}{HTML}{3D8A2B}
 
 %%%%%%%%%% LISTING %%%%%%%%%%
 \lstdefinestyle{python_code}{
@@ -67,6 +66,12 @@ showstringspaces=false,
 breaklines=true
 }
 
+%%%%%%%%%% FONT SIZE (DEFAULT: 10pt) %%%%%%%%%%
+\makeatletter
+\input{size11.clo} % 11pt
+% \input{size12.clo} % 12pt
+\makeatother
+
 %%%%%%%%%% Title %%%%%%%%%%
 \title{The Paper Title\thanks{We thank someone for excellent research assistance. We thank someone for their comments and suggestions.}}
 
@@ -74,7 +79,7 @@ breaklines=true
 \author{Your Name\thanks{Your address; Email: \href{mailto:yourEmail@email.com}{yourEmail@email.com}.}\\
 Department of Economics}
 
-% Uncomment the following if there are multiple author
+% Uncomment below if there are multiple authors
 % \author{
 % Your Name\thanks{Your address; Email: \href{mailto:yourEmail@email.com}{yourEmail@email.com}.}\\Department of Economics
 % \And
@@ -87,26 +92,26 @@ Department of Economics}
 %%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%
 \begin{document}
 \maketitle
-\vspace*{1cm}
 
-%\singlespacing
-%\onehalfspacing
+% \singlespacing
+% \onehalfspacing
 \doublespacing
 
 %%%%%%%%%% ABSTRACT %%%%%%%%%%
 \begin{abstract}
   \lipsum[3] Download this template at the \href{https://github.com/howardhsumail/Paper-LaTeX-Template.git}{Github repository}.
 \end{abstract}
-\vspace*{2cm}
+\bigskip\bigskip
 
-%%%%%%%%%% KEYWORDS %%%%%%%%%%
-\textbf{Keywords}: keyword1, keyword2
+%%%%%%%%%% KEYWORDS & CODES %%%%%%%%%%
+\providecommand{\key}[1]{\textbf{Keywords:} #1}
+\key{keyword1, keyword2}
 
-%%%%%%%%%% CODES %%%%%%%%%%
-\textbf{JEL Codes}: J02, R10
-\clearpage
+\providecommand{\jel}[2]{\textbf{JEL Codes:} #1}
+\jel{J02, R10}
 
 %%%%%%%%%% CONTENTS %%%%%%%%%%
+\newpage
 \section{Introduction}
 \lipsum[4-5] Many previous research has has studied this problem \citep{Lee2018, DS2018}. Download this template at the \href{https://github.com/howardhsumail/Paper-LaTeX-Template.git}{Github repository}.
 
@@ -137,7 +142,7 @@ The {\color{mycolor}competition} can be illustrated with the following graph wit
 
 \section{Comparative Statics}
 
-This is also demonstrated in Figure \ref{picture1} and the results are presented in Appendix \ref{summary_b}. Download this template at the \href{https://github.com/howardhsumail/Paper-LaTeX-Template.git}{Github repository}.
+This is also demonstrated in Figure \ref{picture1} and the results are presented in Appendix \ref{summary_b}. Download this template at the \href{https://github.com/howardhsumail/Paper-LaTeX-Template.git}{Github repository}. \lipsum[104] 
 
 \begin{lstlisting}[style=python_code, caption={Long short-term memory}, label=mypythoncode]
 class network_LSTM(nn.Module):
@@ -160,12 +165,10 @@ class network_LSTM(nn.Module):
         return prediction[-1]
 \end{lstlisting}
 
-\lipsum[104] 
-
 \section{Empirical Results}
-We follow the approach from \cite{HL2019}. \lipsum[50] 
+We follow the approach from \cite{HL2019}. By using this approach, comparable results can be obtained \citep{CES2013}. To calculate the ELBO\footnote{More information about the evidence lower bound (ELBO) can be found on the \href{https://en.wikipedia.org/wiki/Evidence_lower_bound}{Wikipedia}. }, we start from using the property of the KL-divergence. The data can be summarized by the tables with decimal alignment in Table \ref{summary_a}.
 
-By using this approach, comparable results can be obtained \citep{CES2013}. To calculate the ELBO\footnote{More information about the evidence lower bound (ELBO) can be found on the \href{https://en.wikipedia.org/wiki/Evidence_lower_bound}{Wikipedia}. }, we start from using the property of the KL-divergence. The data can be summarized by the tables with decimal alignment below:
+\lipsum[107-109]
 
 \renewcommand*\arraystretch{0.97}
 \renewcommand{\tabcolsep}{2.5pt}
@@ -224,7 +227,7 @@ By using this approach, comparable results can be obtained \citep{CES2013}. To c
 
 \section{Algorithm}
 
-In the following, we present the algorithm:
+\lipsum[50] In the following, we present the algorithm:
 
 \begin{algorithm}
   \SetKwInOut{Input}{Input}
@@ -243,7 +246,7 @@ In the following, we present the algorithm:
   \caption{Euclid's algorithm for finding the greatest common divisor of two nonnegative integers}
 \end{algorithm}
 
-\lipsum[30-31]
+\lipsum[51]
 
 \renewcommand*\arraystretch{0.55}
 \renewcommand{\tabcolsep}{25pt}
@@ -284,9 +287,7 @@ In the following, we present the algorithm:
 \end{table}
 
 \section{Conclusion}
-\lipsum[7-9]
-
-We graph with \texttt{tikz} in \LaTeX:
+\lipsum[9-12] We graph with \texttt{tikz} in \LaTeX:
 
 \begin{multicols}{2}
   \raggedcolumns
@@ -361,11 +362,8 @@ We graph with \texttt{tikz} in \LaTeX:
     \end{tabular}
   \end{center}
 
-  then we get the following:
-
   \begin{align}
-    \nonumber y&=\underset{\pi}{\E}\Big(\beta x + \epsilon\Big)\\
-    &\neq\sum\limits_{i}\beta_i(\underbrace{\alpha+\xi}_{\text{variables}}) + \epsilon\\
+    \nonumber y&=\underset{\pi}{\E}\Big(\beta x + \epsilon\Big)\neq\sum\limits_{i}\beta_i(\underbrace{\alpha+\xi}_{\text{variables}}) + \epsilon\\
     &\Longrightarrow \int_{0}^{10}r \left( \dfrac{r}{50} \right)dr\xlongequal{\text{text here}}\dfrac{r^{3}}{150}\biggr\rvert^{10}_{0}, \forall x\in (a,b)
   \end{align}
   So from $\widehat{ABCD}$, $\widetilde{ABCD}$, $\widehat{ABCD}$, $\overrightarrow{ABCD}$, and $\overline{ABCD}$, we get the desire $\underline{\text{result}}$.

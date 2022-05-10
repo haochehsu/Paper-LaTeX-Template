@@ -38,25 +38,7 @@ For local editing, [download](https://github.com/howardhsumail/Paper-LaTeX-Templ
 
 ### ⚙️ Font Size
 
-The font size of this template is **10.95** point type with **12** points line height.
-
-The default (NIPS styling) is 10pt, with 11 points vertical spacing. To modify the font size, go to `Style/arxiv.sty` line 53 and use the roman numerals below to change the format:
-
-```tex
-\@setfontsize\normalsize\@<fontSize>\@<lineHeight>
-```
-
-For Example:
-
-```tex
-% NIPS Default (10pt with 11 points line height)
-\@setfontsize\normalsize\@xpt\@xipt
-```
-
-#### TeX Default Roman Numerals Point Types 
-`vpt`: 5, `vipt`: 6, `viipt`: 7, `viiipt`: 8, `ixpt`: 9, `xpt`: 10, `xipt`: 10.95
-
-`xiipt`: 12, `xivpt`: 14.4, `xviipt`: 17.28, `xxpt`: 20.74, `xxvpt`: 24.88
+The font size of this template is **11** point type. The default (NIPS styling) is 10pt. To modify the font size, go to "FONT SIZE" preamble in `main.tex` and either comment out `\input{size11.clo}` (11pt) or select `\input{size12.clo}` (12pt).
 
 ### 📒 General Notes
 

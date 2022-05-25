@@ -115,13 +115,13 @@ Department of Economics}
 \lipsum[4-5] Many previous research has has studied this problem \citep{Lee2018, DS2018}. Download this template at the \href{https://github.com/howardhsumail/Paper-LaTeX-Template.git}{Github repository}.
 
 \section{Model}
-\lipsum[105-106] More are discussed in Appendix \ref{discussion}.
+\lipsum[105-106] More are discussed in \Cref{discussion}.
 
 \begin{theorem}[Envelope Theorem]\hlabel{T1}
   Only the direct effects of a change in an exogenous variable need be considered, even though the exogenous variable may enter the maximum value function indirectly as part of the solution to the endogenous choice variables. The proof is in Appendix \ref{proof_T1}.
 \end{theorem}
 
-The {\color{mycolor}competition} can be illustrated with the following graph with the implementation is presented in Listing \ref{mypythoncode}:
+The {\color{mycolor}competition} can be illustrated with the following graph with the implementation is presented in Listing \ref{mypythoncode} or \cref{mypythoncode}:
 
 \begin{figure}[H]
   \centering
@@ -141,7 +141,7 @@ The {\color{mycolor}competition} can be illustrated with the following graph wit
 
 \section{Comparative Statics}
 
-This is also demonstrated in Figure \ref{picture1} and the results are presented in Appendix \ref{summary_b}. Download this template at the \href{https://github.com/howardhsumail/Paper-LaTeX-Template.git}{Github repository}. \lipsum[104] 
+This is also demonstrated in Figure \ref{picture1} or \cref{picture1} and the results are presented in Appendix \ref{summary_b}. Download this template at the \href{https://github.com/howardhsumail/Paper-LaTeX-Template.git}{Github repository}. \lipsum[104] 
 
 \begin{lstlisting}[style=python_code, caption={Long short-term memory}, label=mypythoncode]
 class network_LSTM(nn.Module):
@@ -165,7 +165,7 @@ class network_LSTM(nn.Module):
 \end{lstlisting}
 
 \section{Empirical Results}
-We follow the approach from \cite{HL2019}. By using this approach, comparable results can be obtained \citep{CES2013}. To calculate the ELBO\footnote{More information about the evidence lower bound (ELBO) can be found on the \href{https://en.wikipedia.org/wiki/Evidence_lower_bound}{Wikipedia}. }, we start from using the property of the KL-divergence. The data can be summarized by the tables with decimal alignment in Table \ref{summary_a}.
+We follow the approach from \cite{HL2019}. By using this approach, comparable results can be obtained \citep{CES2013}. To calculate the ELBO\footnote{More information about the evidence lower bound (ELBO) can be found on the \href{https://en.wikipedia.org/wiki/Evidence_lower_bound}{Wikipedia}. }, we start from using the property of the KL-divergence. The data can be summarized by the tables with decimal alignment in Table \cref{summary_a}.
 
 \lipsum[107-109]
 
@@ -337,7 +337,7 @@ We follow the approach from \cite{HL2019}. By using this approach, comparable re
 
 \lipsum[103]
 
-\section{Proof of Theorem \ref{T1}}\hlabel{proof_T1}
+\section{Proof of \Cref{T1}}\hlabel{proof_T1}
 
 \hlabel{ch1_proof}We will proof the following equation:
 \begin{proof}

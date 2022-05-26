@@ -53,6 +53,9 @@
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,anchorcolor=blue}
 \renewcommand*\thefootnote{\textcolor{red}{\arabic{footnote}}}
 \definecolor{mycolor}{HTML}{3D8A2B}
+\definecolor{darkerGreen}{HTML}{278041}
+\definecolor{darkerPurple}{HTML}{744CB4}
+\definecolor{clay}{HTML}{CA7C20}
 
 %%%%%%%%%% LISTING %%%%%%%%%%
 \lstdefinestyle{python_code}{
@@ -115,7 +118,7 @@ Department of Economics}
 \lipsum[4-5] Many previous research has has studied this problem \citep{Lee2018, DS2018}. Download this template at the \href{https://github.com/howardhsumail/Paper-LaTeX-Template.git}{Github repository}.
 
 \section{Model}
-\lipsum[105-106] More are discussed in \Cref{discussion}.
+Equation \ref{myEquation} or \cref{myEquation} or Equation \eqref{myEquation}. \lipsum[105-106] More are discussed in \Cref{discussion}.
 
 \begin{theorem}[Envelope Theorem]\hlabel{T1}
   Only the direct effects of a change in an exogenous variable need be considered, even though the exogenous variable may enter the maximum value function indirectly as part of the solution to the endogenous choice variables. The proof is in Appendix \ref{proof_T1}.
@@ -169,59 +172,59 @@ We follow the approach from \cite{HL2019}. By using this approach, comparable re
 
 \lipsum[107-109]
 
-\renewcommand*\arraystretch{0.97}
+\renewcommand*\arraystretch{1.5}
 \renewcommand{\tabcolsep}{2.5pt}
 \begin{table}[H]
+  \centering
   \renewcommand{\thetable}{B.\arabic{table}a}
   \caption{First Table}
   \label{summary_a}
   \fontsize{10}{11}\selectfont
-  \hspace*{-0.5cm}
-  \begin{tabular}{lrrrrrrrrr}
-    \toprule
-    Category                   & Total & Shares (\%) & Female & Male  & Asian & Black/AA & His./Latino & White/Cau. & Zeros (\%) \\ \hline
-    child care                 & 19.39 & 0.08   & 12.32  & 20.12 & 23.14 & 63.78    & 20.24       & 19.00      & 0.07  \\
-    eating                     & 30.35 & 6.12   & 35.97  & 6.23 & 24.61 & 21.58    & 38.18       & 2.02      & 0.00  \\
-    education                  & 9.91  & 0.04   & 9.94   & 90.54  & 9.69  & 7.99     & 10.64        & 10.14      & 0.90  \\
-    entertainment (not TV)     & 26.05 & 0.10   & 29.19  & 26.60 & 33.36 & 26.13    & 4.43       & 25.15      & 0.45  \\ \bottomrule
-  \end{tabular}
-  \hspace*{-1cm}
-  \begin{minipage}{1\textwidth}
-    \onehalfspacing
-    \vspace*{0.05cm}
-    \begin{tablenotes}
-      \footnotesize
-      \item\textit{Note:} This is the first table.
-    \end{tablenotes}
-  \end{minipage}
+  \hspace*{0cm}\begin{tabular}{lrrrrrrrrr}
+  \toprule
+  Category                   & Total & Shares (\%) & Female & Male  & Asian & Black/AA & His./Latino & White/Cau. & Zeros (\%) \\ \hline
+  child care                 & 19.39 & 0.08   & 12.32  & 20.12 & 23.14 & 63.78    & 20.24       & 19.00      & 0.07  \\
+  eating                     & 30.35 & 6.12   & 35.97  & 6.23 & 24.61 & 21.58    & 38.18       & 2.02      & 0.00  \\
+  education                  & 9.91  & 0.04   & 9.94   & 90.54  & 9.69  & 7.99     & 10.64        & 10.14      & 0.90  \\
+  entertainment (not TV)     & 26.05 & 0.10   & 29.19  & 26.60 & 33.36 & 26.13    & 4.43       & 25.15      & 0.45  \\ \bottomrule
+\end{tabular}
+\hspace*{-0.7cm}
+\begin{minipage}{1\textwidth}
+  \onehalfspacing
+  \vspace*{0.05cm}
+  \begin{tablenotes}
+    \footnotesize
+    \item\textit{Note:} This is the first table.
+  \end{tablenotes}
+\end{minipage}
 \end{table}
 
-\renewcommand*\arraystretch{0.97}
+\renewcommand*\arraystretch{1.5}
 \renewcommand{\tabcolsep}{4.1pt}
 \begin{table}[H]
+  \centering
   \addtocounter{table}{-1}
   \renewcommand{\thetable}{B.\arabic{table}b}
   \caption{Second Table}
   \label{summary_b}
   \fontsize{10}{11}\selectfont
-  \hspace*{-0.5cm}
-  \begin{tabular}{lrrrrrrrrr}
-    \toprule
-    Category                   & Total & Shares (\%) & Female & Male  & Asian & Black/AA & His./Latino & White/Cau. & Zeros (\%) \\ \hline
-    child care                 & 19.39 & 0.08   & 39.32  & 40.12 & 23.14 & 18.78    & 20.24       & 19.00      & 0.07  \\
-    personal care              & 13.92 & 0.06   & 24.00  & 23.14 & 16.12 & 1.76    & 15.15       & 13.66      & 0.00  \\
-    sports/exercise            & 20.44 & 0.08   & 20.38  & 31.00 & 24.99 & 25.48    & 20.71       & 20.07      & 0.53  \\
-    TV                         & 28.61 & 0.12   & 48.47  & 9.93 & 2.35 & 63.70    & 29.22       & 80.20      & 0.46  \\ \bottomrule
-  \end{tabular}
-  \hspace*{-1cm}
-  \begin{minipage}{1\textwidth}
-    \onehalfspacing
-    \vspace*{0.05cm}
-    \begin{tablenotes}
-      \footnotesize
-      \item\textit{Note:} This is the second table.
-    \end{tablenotes}
-  \end{minipage}
+  \hspace*{0cm}\begin{tabular}{lrrrrrrrrr}
+  \toprule
+  Category                   & Total & Shares (\%) & Female & Male  & Asian & Black/AA & His./Latino & White/Cau. & Zeros (\%) \\ \hline
+  child care                 & 19.39 & 0.08   & 39.32  & 40.12 & 23.14 & 18.78    & 20.24       & 19.00      & 0.07  \\
+  personal care              & 13.92 & 0.06   & 24.00  & 23.14 & 16.12 & 1.76    & 15.15       & 13.66      & 0.00  \\
+  sports/exercise            & 20.44 & 0.08   & 20.38  & 31.00 & 24.99 & 25.48    & 20.71       & 20.07      & 0.53  \\
+  TV                         & 28.61 & 0.12   & 48.47  & 9.93 & 2.35 & 63.70    & 29.22       & 80.20      & 0.46  \\ \bottomrule
+\end{tabular}
+\hspace*{-0.6cm}
+\begin{minipage}{1\textwidth}
+  \onehalfspacing
+  \vspace*{0.05cm}
+  \begin{tablenotes}
+    \footnotesize
+    \item\textit{Note:} This is the second table.
+  \end{tablenotes}
+\end{minipage}
 \end{table}
 
 \section{Algorithm}
@@ -247,7 +250,7 @@ We follow the approach from \cite{HL2019}. By using this approach, comparable re
 
 \lipsum[51]
 
-\renewcommand*\arraystretch{0.55}
+\renewcommand*\arraystretch{1.2}
 \renewcommand{\tabcolsep}{25pt}
 \begin{table}[H]
   \centering
@@ -285,8 +288,19 @@ We follow the approach from \cite{HL2019}. By using this approach, comparable re
   \end{minipage}
 \end{table}
 
+\begin{lemma}[This is a lemma]\label{lma1}
+  \onehalfspacing
+  \begin{enumerate}[(a)]
+    \setlength{\itemsep}{-0.5pt}
+    \item[] \hfill
+    \item For any feasible disclosure policy  $G\in \mathcal{G}$, $W_G(p)$ is a convex function. Moreover, for all $p\in[0,1]$, $W_{G_{\underline{\pi}}}(p)\leq W_G(p)\leq W_{G_{\overline{\pi}}(p)}$.
+    \item The converse of the above statement is also true. That is, if $W:[0,1]\to \mathbbm{R}$ is a convex function that satisfies $W_{G_{\underline{\pi}}}(p)\leq W(p)\leq W_{G_{\overline{\pi}}(p)}$, then there exists a feasible $G\in\mathcal{G}$ such that $W_G(p) = W(p)$ for all $p\in[0,1]$.
+  \end{enumerate}
+\end{lemma}
+
 \section{Conclusion}
-\lipsum[9-12] We graph with \texttt{tikz} in \LaTeX:
+
+\lipsum[13-15] We graph with \texttt{tikz} in \LaTeX:
 
 \begin{multicols}{2}
   \raggedcolumns
@@ -357,11 +371,13 @@ We follow the approach from \cite{HL2019}. By using this approach, comparable re
       $\begin{cases}
       \text{trade}, & p(\text{trade})=\dfrac{y}{v}\\
       \text{no trade}, & p(\text{no trade})=1-\dfrac{y}{v}
-      \end{cases}$\\
+      \end{cases}$
     \end{tabular}
   \end{center}
+  
+  \vspace*{-1cm}
 
-  \begin{align}
+  \begin{align}\label{myEquation}
     \nonumber y&=\underset{\pi}{\E}\Big(\beta x + \epsilon\Big)\neq\sum\limits_{i}\beta_i(\underbrace{\alpha+\xi}_{\text{variables}}) + \epsilon\\
     &\Longrightarrow \int_{0}^{10}r \left( \dfrac{r}{50} \right)dr\xlongequal{\text{text here}}\dfrac{r^{3}}{150}\biggr\rvert^{10}_{0}, \forall x\in (a,b)
   \end{align}
@@ -373,5 +389,130 @@ We follow the approach from \cite{HL2019}. By using this approach, comparable re
   $$g(a)=f(a)-a>0, \ g(b)=f(b)-b<0$$
   By IVT: $\exists c\in(a,b)$ s.t. $g(c)=0\implies \exists c\in(a,b)$ s.t. $f(c)-c=0\implies f(c)=c.$
 \end{framed}
+
+\section{More \texttt{Tikz}}\hlabel{tikzpics}
+
+\begin{figure}[H]
+  \centering
+  \caption{Caption above figure}
+  \begin{tikzpicture}[xscale=1, yscale=1.5]
+    \draw[line width=0.35mm, ->] (-0.1,0) -- (8.2,0) node[right] {$p$};
+    
+    \draw[line width=0.35mm, ->] (0,-0.1) -- (0,4.2) node[above] {$W_G(p)$};
+    
+    \draw (4,0) node[below ]{$\mu$};
+    \draw (0,4) node[left]{$\mu$};
+    
+    \draw[line width=0.3mm, blue, name path =A] (0,0) plot[domain=0:8] (\x,{1/16*(8-\x)^2}) node[anchor=south] at (8,4) {$W_{\overline{\pi}}(p)$};
+    \draw[line width=0.3mm,red, name path =B] (0,4) -- (4,0) -- (8,0) node[anchor=north] at (8,4) {$W_{\underline{\pi}}(p)$};
+    
+    \draw[line width=0.3mm, orange, name path =C](0,0)
+    plot[domain=0:6.82746] (\x,{4-1.08586 *\x + 0.0732323*\x^2}) node[anchor=north] at (8,2.5){$W_G(p)$};
+    
+    \draw[line width=0.3mm, orange, name path =D](6.82746,0)
+    -- (8,0);
+    
+    \draw (4.4,0) node[below]{$p_0$};
+
+    \node[outer sep=0pt, circle, fill=darkerPurple, inner sep=1pt, minimum size=1.5mm] (P) at
+    (4.4,0.64) {};
+
+    \draw[line width=0.3mm, darkerGreen] (8,0) -- (5.37538,0) -- (P) -- (2.75076,1.7221575361) -- (1.37539,2.6241)--(0,4) node[anchor=south] at (8,2.5){$W_{G^\prime}(p)$};
+
+    \node[outer sep=0pt, circle, fill=clay, inner sep=1pt, minimum size=1.5mm] (Q1) at
+    (2.75076,0) {};
+
+    \draw (Q1) node[below]{$\gamma_0$};
+
+    \node[outer sep=0pt, circle, fill=darkerPurple, inner sep=1pt, minimum size=1.5mm] (Q2) at
+    (2.75076,1.7221575361) {};
+
+    \path[draw=red, dashed] (Q1) -- (Q2);
+    \path[draw=red, dashed] (4.4,0) -- (P);
+  \end{tikzpicture}
+  \label{fig:2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}[xscale=10,yscale=5,
+    userDefineLine/.style={line width=0.4mm, red}
+    ]
+    \draw[line width=0.3mm, ->] (0,0) -- (1.04,0);
+    \node (B) at (1.1,0) {\text{prior}};
+    
+    \draw[line width=0.3mm, ->] (0,0) -- (0,0.8);
+    \node (B) at (0.32,0.32) {$V_1^*(p^0)$};
+    \draw (0,0) node[left]{\footnotesize $0$};
+  
+    \draw[userDefineLine] (0,0) -- (0.3,0);
+    \draw[userDefineLine] (0.3, 0) -- (1,0.7);
+    
+    \draw[line width=0.3mm, red, dotted] (0.5,0) -- (0.5, 0.35);
+    
+    \draw[line width=0.6mm, violet, opacity=0.7, dashed] (0,0) -- (1,0.7);
+
+    % x axis
+    \draw (0.3,0) coordinate(g1) node[below ]{$p$};
+    \draw (g1) ++(0,-0.01) -- ++(0,0.02);
+    
+    \draw (1,0) coordinate(g2) node[below]{$1$};
+    \draw (g2) ++(0,-0.01) -- ++(0,0.02);
+    
+    \draw[dotted] (1,0) -- (1,0.7);
+    
+    % y axis
+    \draw (0,0.7) coordinate(u1) node[left]{\footnotesize $1-p$};
+    \draw (u1) ++(-0.01,0) -- ++(0.02,0);
+    
+    \draw[dotted] (u1) -- (1,0.7);
+    
+    %Legend
+    \matrix [draw, fill=white, below right] at (1.05,0.5) {
+    \draw [userDefineLine] ++(-0.3,0) -- ++(0.6,0) node[black,right] {$V_1(p^0)$}; \\
+    \draw [line width=0.6mm, violet, opacity=0.7, dashed] ++(-0.3,0) -- ++(0.6,0) node[black,right,opacity=1] {$V_1^*(p^0)$}; \\
+    };
+    
+    \node[outer sep=0pt, circle, fill=blue, inner sep=1pt, minimum size=1.5mm] (P) at
+    (0.5,0.35) {};
+    
+    \node (C) at (0.5,-0.06) {\color{blue}$p^0=\frac{1}{2}$};
+    
+  \end{tikzpicture}
+  \caption{Caption below figure} \label{fig:M2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}[scale=10.0, xscale=2]
+    \draw[line width=0.3mm, ->] (1/2, 0) -- (1, 0) node[right] {$\lambda_i$};
+    \draw[line width=0.3mm, ->] (1/2, 0) -- (1/2, 1/3) node[above] {$R_j$};
+    
+    % blue lines
+    \draw[line width=0.3mm, scale=1, domain=1/2:11/16, smooth, variable=\x, blue] plot ({\x}, {1/5});
+    \draw[line width=0.3mm, scale=1, domain=11/16:1, smooth, variable=\x, blue] plot ({\x}, {1/4-1/8-1/2*(1/8-((2*\x-1)/2)*(2/3)});
+    
+    % red lines
+    \draw[line width=0.3mm, scale=1, domain=1/2:5/8, smooth, variable=\x, red] plot ({\x}, {1/4});
+    \draw[line width=0.3mm, scale=1, domain=5/8:1, smooth, variable=\x, red] plot ({\x}, {1/4-1/8-1/2*(1/8-((2*\x-1)/2))});
+    
+    \draw[line width=0.3mm, dashed,black,thick] (5/8,1/4)--(1,1/4);
+    \draw[line width=0.3mm, dashed,black,thick] (11/16,1/5)--(1,1/5);
+    
+    \node[circle,inner sep=1pt,fill=black,label=left:{$\frac{1}{4}$}] at (1/2,1/4) {};
+    \node[circle,inner sep=1pt,fill=red,minimum size=2mm,label=below:{$\frac{5}{8}$}] at (5/8,0) {};
+    \node[circle,inner sep=1pt,fill=blue,minimum size=2mm, label=below:{$
+    \frac{11}{16}$}] at (11/16,0) {};
+    \node[circle,inner sep=1pt,fill=black,label=below:{$\frac{1}{2}$}] at (1/2,0) {};
+    
+    \matrix [draw, above left] at (1.11,0.08) {
+    &\node[red,font=\fontsize{10}{10}\selectfont] {$\mu=1$}; \\
+    &\node[blue,font=\fontsize{10}{10}\selectfont] {$\mu=2/3$}; \\
+    };
+    
+    \node (D) at (0.8,-0.04) {$p=\frac{1}{4}$};
+  \end{tikzpicture}
+  \caption{Caption below figure} \label{fig:M3}
+\end{figure}
 
 \end{document}

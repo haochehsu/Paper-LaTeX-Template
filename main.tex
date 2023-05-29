@@ -22,7 +22,12 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem*{theorem*}{Theorem}
 \newtheorem*{definition}{Definition}
-\newtheorem*{assumption}{Assumption}
+\newtheorem{assumption}{Assumption}
+\newtheorem{assumptionalt}{Assumption}[assumption]
+\newenvironment{assumptionp}[1]{
+  \renewcommand\theassumptionalt{#1}
+  \assumptionalt
+}{\endassumptionalt}
 \newtheorem{lemma}{Lemma}
 \newtheorem{example}{Example}
 \newtheorem{corollary}{Corollary}
@@ -95,8 +100,8 @@ Department of Economics}
 \maketitle
 
 % \singlespacing
-% \onehalfspacing
-\doublespacing
+\onehalfspacing
+% \doublespacing
 
 %%%%%%%%%% ABSTRACT %%%%%%%%%%
 \begin{abstract}
@@ -300,6 +305,14 @@ We follow the approach from \cite{HL2019}. By using this approach, comparable re
 \end{lemma}
 
 \section{Conclusion}
+
+The timing of the game is as follows:
+\begin{enumerate}
+    \item Seller chooses $p$.
+    \item Intermediary observes seller's pricing decision and announces the disclosure policy $G$.
+    \item Buyer observes both the price $p$ and the disclosure policy $G$. Buyer's private search cost $\xi$ realizes according to $H$. She will visit the intermediary if and only if $W_G(p)\geq s$. Otherwise, he does not visit and no purchase is made.
+    \item When buyer pays his visit, his posterior expected value $s$ is drawn according to $G$. He purchases the product if $\E(v|s) \geq p$. Otherwise, no purchase is made.
+\end{enumerate}
 
 \lipsum[14-15] We graph with \texttt{tikz} in \LaTeX:
 

@@ -1,6 +1,6 @@
 # Paper LaTeX Template
 
-This double-spaced template is based on the [arXiv style](https://github.com/kourgeorge/arxiv-style) which is based on the the [NeurIPS](https://nips.cc/) styling. The reference style includes [AEA](https://github.com/ShiroTakeda/econ-bst/blob/master/customization/econ-aea.bst) (lastname, firstname) and [Econometrica](https://github.com/ShiroTakeda/econ-bst/blob/master/customization/econ-econometrica.bst) (lastname, abbreviated firstname).
+This double-spaced template is based on the [arXiv style](https://github.com/kourgeorge/arxiv-style) which is based on the [NeurIPS](https://nips.cc/) styling. The reference style includes [AEA](https://github.com/ShiroTakeda/econ-bst/blob/master/customization/econ-aea.bst) (lastname, firstname) and [Econometrica](https://github.com/ShiroTakeda/econ-bst/blob/master/customization/econ-econometrica.bst) (lastname, abbreviated firstname).
 
 Based on the NIPS styling, it makes this paper template esthetic and convenient for reading. This template defines the styles and format in the `main.tex` preambles and collects all the imported packages in the `package.sty` making the source more transparent and easier to customize.
 
@@ -22,7 +22,7 @@ This template includes:
 
 ### 📐 Usage
 
-User only need to customize the `package.sty` in the `Style` folder and edit the 2 **Content** files. Bibliography style is located in `main.tex`: 
+Users only need to customize the `package.sty` in the `Style` folder and edit the 2 **Content** files. The bibliography style is located in `main.tex`: 
 
 ```tex
 \bibliographystyle{Style/aea} # Style/ecta
@@ -38,8 +38,8 @@ For local editing, [download](https://github.com/howardhsumail/Paper-LaTeX-Templ
 
 ### ⚙️ Font Size
 
-The font size of this template is **11pt**. The default (NIPS styling) is 10pt. To modify the font size, go to "FONT SIZE" preamble in `main.tex` and either comment out `\input{size11.clo}` (11pt) or select `\input{size12.clo}` (12pt).
+The font size of this template is **11pt**. The default (NIPS styling) is 10pt. To modify the font size, go to the "FONT SIZE" preamble in `main.tex` and either comment out `\input{size11.clo}` (11pt) or select `\input{size12.clo}` (12pt).
 
 ### 📒 General Notes
 
-For help, comments, bug reporting, and change requests, please [contact](mailto:howardhsumail@gmail.com) the [author](https://www.haochehsu.com/). You can use or redistribute this project, however, the author takes no responsibility for whatever usage of this template. Finally, you are very welcome to contribute to this template.
+For help, comments, bug reporting, and change requests, please [contact](mailto:howard@hsu.xyz) the [author](https://haochehsu.com). You can use or redistribute this project, however, the author takes no responsibility for whatever template usage. Finally, you are very welcome to contribute to this template.
